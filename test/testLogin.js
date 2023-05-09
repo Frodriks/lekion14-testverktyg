@@ -42,9 +42,9 @@ describe.only('Login to Luma Demostore', () => {
                 await driver.wait(until.elementLocated(By.css('.action.switch')), 20000);
                 await driver.findElement(By.css('.action.switch')).click();
 
-                //await driver.wait(until.elementLocated(By.css('a[href="https://magento.softwaretestingboard.com/customer/account/"]')), 10000);
-                await driver.wait(until.elementLocated(By.css('a[href$="/customer/account/"]')), 10000);
-                await driver.findElement(By.css('a[href$="/customer/account/"]')).click();
+                await driver.wait(until.elementLocated(By.css('a[href="https://magento.softwaretestingboard.com/customer/account/"]')), 10000);
+                //await driver.wait(until.elementLocated(By.css('a[href$="/customer/account/"]')), 10000);
+                await driver.findElement(By.css('a[href="https://magento.softwaretestingboard.com/customer/account/"]')).click();
 
                 // Get and check our information
                 await driver.wait(until.elementLocated(By.css('.box-information .box-content p')), 10000);
