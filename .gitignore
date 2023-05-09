@@ -4,3 +4,6 @@ mochawesome-report/
 
 # Specific configurations
 package-lock.json
+
+# Configuration
+#.env
