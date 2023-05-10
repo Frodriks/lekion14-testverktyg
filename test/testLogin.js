@@ -21,14 +21,19 @@ describe.only('Login to Luma Demostore', () => {
             try {  
                 // Go to store
                 await driver.get('https://magento.softwaretestingboard.com/');
+
                 // Go to login
                 await driver.findElement(By.css('.authorization-link > a:nth-child(1)')).click();
+
                 // Get the from (Username)
                 await driver.wait(until.elementLocated(By.id('email')), 10000);
+
                 // Send keys (Username)
                 await driver.findElement(By.id('email')).sendKeys(user);
+
                 // Get the form (Password)
                 //await driver.wait(until.elementLocated(By.id('pass')), 10000);
+                
                 // Send key (Password)
                 await driver.findElement(By.id('pass')).sendKeys(pass);
 
