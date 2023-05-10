@@ -2,6 +2,8 @@
 
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const should = require ('chai').should();
+const assert = require('assert');
+const expect = require('chai').expect;
 
 /*
     Som kund,
@@ -10,7 +12,7 @@ const should = require ('chai').should();
 */
 
 // Test: Kontaktformulär
-describe('Hitta kontakformulär', () => {
+describe.only('Hitta kontakformulär', () => {
 // Testfall
     context('Jag går till "Contact us", fyller i fälten och klickar på "Submit"', () => {
         it('Sidan uppdateras och ett meddelande dyker med en text i om att meddelandet tagist emot', async () => {
@@ -48,6 +50,8 @@ describe('Hitta kontakformulär', () => {
 
                 // Assert
                 information.should.contain('Thanks for contacting us');
+                assert.equal(information, "Thanks for contacting us with your comments and questions. We'll respond to you very soon." );
+                expect(information).to.equal("Thanks for contacting us with your comments and questions. We'll respond to you very soon." );
 
     
             } finally {
