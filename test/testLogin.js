@@ -14,7 +14,7 @@ let pass = process.env.PASS;
 */
 
 // .only() = run only this test block // .skit() = skip this specific test
-describe.only('Login to Luma Demostore', () => {
+describe('Login to Luma Demostore', () => {
     context('I click on login and enter my credentials', () => {
         it('I should be logged in and see my profile', async () => {
             const driver = await new Builder().forBrowser('firefox').build();
