@@ -12,7 +12,7 @@ const assert = require('assert');
 */
 
 // Test: Lägg till/ta bort produkt ur kundkorg
-describe('Lägg till produkt i kundkorg', () => {
+describe.only('Lägg till produkt i kundkorg', () => {
     // Testfall
     context('Jag lägger till en produkt i kundkorgen och sedan tar jag bort den', () => {
         it('Jag öppnar kundkorgen och den är tom', async () => {
@@ -62,11 +62,11 @@ describe('Lägg till produkt i kundkorg', () => {
 
                 // Asserts
                 information.should.contain('You have no items');
-               // assert.equal(information, "You have no items in your shopping cart.");
-               // expect(information).to.equal("You have no items in your shopping cart.");
+                // assert.equal(information, "You have no items in your shopping cart.");
+                expect(information).to.equal("You have no items in your shopping cart.");
 
             } finally {
-                //await driver.quit();
+                await driver.quit();
             }
         });
     });
