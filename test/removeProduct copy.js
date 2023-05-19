@@ -12,7 +12,7 @@ const assert = require('assert');
 */
 
 // Test: Lägg till/ta bort produkt ur kundkorg
-describe.only('Lägg till produkt i kundkorg', () => {
+describe('Lägg till produkt i kundkorg', () => {
     // Testfall
     context('Jag lägger till en produkt i kundkorgen och sedan tar jag bort den', () => {
         it('Jag öppnar kundkorgen och den är tom', async () => {
